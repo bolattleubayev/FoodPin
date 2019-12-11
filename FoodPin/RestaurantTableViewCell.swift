@@ -24,6 +24,7 @@ class RestaurantTableViewCell: UITableViewCell {
     @IBOutlet var nameLabel: UILabel!
     @IBOutlet var locationLabel: UILabel!
     @IBOutlet var typeLabel: UILabel!
+    @IBOutlet var heartTick: UIImageView!
     @IBOutlet var thumbnailImageView: UIImageView! {
         didSet {
             // to change the corner radius also go to the storyboard

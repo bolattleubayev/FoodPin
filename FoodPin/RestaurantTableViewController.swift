@@ -18,6 +18,9 @@ class RestaurantTableViewController: UITableViewController {
 
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem
+        
+        // stretching tableview for iPad
+        tableView.cellLayoutMarginsFollowReadableWidth = true
     }
 
     // MARK: - Table view data source
@@ -40,8 +43,78 @@ class RestaurantTableViewController: UITableViewController {
         cell.locationLabel.text = restaurantLocations[indexPath.row]
         cell.typeLabel.text = restaurantTypes[indexPath.row]
         cell.thumbnailImageView.image = UIImage(named: restaurantImages[indexPath.row])
+        cell.heartTick.image = UIImage(named: "heart-tick")
+        cell.heartTick.isHidden = restaurantIsVisited[indexPath.row] ? false : true
+        //cell.accessoryType = restaurantIsVisited[indexPath.row] ? .checkmark : .none
+        
+//        if restaurantIsVisited[indexPath.row] {
+//            cell.accessoryType = .checkmark
+//        } else {
+//            cell.accessoryType = .none
+//        }
+        
         return cell
     }
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        // create an option menu as an action sheet
+        let optionMenu = UIAlertController(title: nil, message: "What do you want to do?", preferredStyle: .actionSheet)
+        
+        // handling iPad popover presentation error
+        if let popoverController = optionMenu.popoverPresentationController {
+            if let cell = tableView.cellForRow(at: indexPath) {
+                popoverController.sourceView = cell
+                popoverController.sourceRect = cell.bounds
+            }
+        }
+        
+        
+        // Add actions to the menu
+        let cancelAction = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
+        
+        // Add Call action
+        
+        let callActionHandler = { (action: UIAlertAction!) -> Void in
+            let alertMessage = UIAlertController(title: "Service Unavailable", message: "Sorry, the call feature is not ready yet. Please retry later.", preferredStyle: .alert)
+            alertMessage.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
+            self.present(alertMessage, animated: true, completion: nil)
+        }
+        
+        let callAction = UIAlertAction(title: "Call " + "123-000-\(indexPath.row)", style: .default, handler: callActionHandler)
+        
+        // Check-in/Undo Check-in action
+        
+        var checkInAction = UIAlertAction()
+        
+        if restaurantIsVisited[indexPath.row] {
+            checkInAction = UIAlertAction(title: "Undo Check in", style: .default, handler: { (action: UIAlertAction!) -> Void in
+                    let cell = tableView.cellForRow(at: indexPath) as? RestaurantTableViewCell
+                    //cell?.accessoryType = .none
+                    cell?.heartTick.isHidden = true
+                    self.restaurantIsVisited[indexPath.row] = false
+                }
+            )
+        } else {
+            checkInAction = UIAlertAction(title: "Check in", style: .default, handler: { (action: UIAlertAction!) -> Void in
+                    let cell = tableView.cellForRow(at: indexPath) as? RestaurantTableViewCell
+                    //cell?.accessoryType = .checkmark
+                    cell?.heartTick.isHidden = false
+                    self.restaurantIsVisited[indexPath.row] = true
+                }
+            )
+        }
+        
+        optionMenu.addAction(checkInAction)
+        optionMenu.addAction(callAction)
+        optionMenu.addAction(cancelAction)
+        
+        // Display the menu
+        present(optionMenu, animated: true, completion: nil)
+        
+        // remove gray selection after everything is done from the cell
+        tableView.deselectRow(at: indexPath, animated: false)
+    }
+    
     
     var restaurantNames = ["Cafe Deadend", "Homei", "Teakha", "Cafe Loisl", "Petite Oyster", "For Kee Restaurant", "Po's Atelier", "Bourke Street Bakery", "Haigh's Chocolate", "Palomino Espresso", "Upstate", "Traif", "Graham Avenue Meats And Deli", "Waffle & Wolf", "Five Leaves", "Cafe Lore", "Confessional", "Barrafina", "Donostia", "Royal Oak", "CASK Pub and Kitchen"]
     
@@ -50,6 +123,8 @@ class RestaurantTableViewController: UITableViewController {
     var restaurantLocations = ["Hong Kong", "Hong Kong", "Hong Kong", "Hong Kong", "Hong Kong", "Hong Kong", "Hong Kong", "Sydney", "Sydney", "Sydney", "New York", "New York", "New York", "New York", "New York", "New York", "New York", "London", "London", "London", "London"]
     
     var restaurantTypes = ["Coffee & Tea Shop", "Cafe", "Tea House", "Austrian / Causual Drink", "French", "Bakery", "Bakery", "Chocolate", "Cafe", "American / Seafood", "American", "American", "Breakfast & Brunch", "Coffee & Tea", "Coffee & Tea", "Latin American", "Spanish", "Spanish", "Spanish", "British", "Thai"]
+    
+    var restaurantIsVisited = Array(repeating: false, count: 21)
     
     /*
     // Override to support conditional editing of the table view.
