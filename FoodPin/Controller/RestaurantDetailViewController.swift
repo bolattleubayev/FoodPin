@@ -15,10 +15,10 @@ class RestaurantDetailViewController: UIViewController {
 
         // Do any additional setup after loading the view.
         
-        restaurantImageView.image = UIImage(named:restaurantImageName)
-        nameLabel.text = restaurantName
-        locationLabel.text = restaurantLocation
-        typeLabel.text = restaurantType
+        restaurantImageView.image = UIImage(named:restaurant.image)
+        nameLabel.text = restaurant.name
+        locationLabel.text = restaurant.location
+        typeLabel.text = restaurant.type
         
         // disabling large titles
         
@@ -30,10 +30,7 @@ class RestaurantDetailViewController: UIViewController {
     @IBOutlet var locationLabel: UILabel!
     @IBOutlet var typeLabel: UILabel!
     
-    var restaurantName = ""
-    var restaurantLocation = ""
-    var restaurantType = ""
-    var restaurantImageName = ""
+    var restaurant: Restaurant = Restaurant()
     
     /*
     // MARK: - Navigation
