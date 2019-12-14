@@ -45,7 +45,7 @@ class RestaurantDetailViewController: UIViewController, UITableViewDataSource, U
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         // Do any additional setup after loading the view.
         
         headerView.nameLabel.text = restaurant.name
@@ -58,12 +58,30 @@ class RestaurantDetailViewController: UIViewController, UITableViewDataSource, U
         
         tableView.delegate = self
         tableView.dataSource = self
-        
         tableView.separatorStyle = .none
+        
+        
+        navigationController?.navigationBar.setBackgroundImage(UIImage(), for: .default)
+        navigationController?.navigationBar.shadowImage = UIImage()
+        navigationController?.navigationBar.tintColor = .white
+        
+        tableView.contentInsetAdjustmentBehavior = .never
+        
+        navigationController?.hidesBarsOnSwipe = false
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        navigationController?.hidesBarsOnSwipe = false
+        navigationController?.setNavigationBarHidden(false, animated: true)
+    }
+    
+    override var preferredStatusBarStyle: UIStatusBarStyle {
+        return .lightContent
     }
     
     @IBOutlet weak var tableView: UITableView!
-    
     @IBOutlet weak var headerView: RestaurantDetailHeaderView!
     
     var restaurant: Restaurant = Restaurant()

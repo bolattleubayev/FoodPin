@@ -7,14 +7,8 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
-        <array key="Rubik-Light.ttf">
-            <string>Rubik-Light</string>
-        </array>
         <array key="Rubik-Medium.ttf">
             <string>Rubik-Medium</string>
-        </array>
-        <array key="Rubik-Regular.ttf">
-            <string>Rubik-Regular</string>
         </array>
     </customFonts>
     <scenes>
@@ -52,19 +46,19 @@
                                                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="1" translatesAutoresizingMaskIntoConstraints="NO" id="0k1-Km-FsB">
                                                     <rect key="frame" x="75" y="0.0" width="257" height="58.5"/>
                                                     <subviews>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xdP-h4-68a">
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xdP-h4-68a">
                                                             <rect key="frame" x="0.0" y="0.0" width="47" height="20.5"/>
                                                             <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Location" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3Ki-lS-kVl">
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Location" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3Ki-lS-kVl">
                                                             <rect key="frame" x="0.0" y="21.5" width="59" height="18"/>
                                                             <fontDescription key="fontDescription" style="UICTFontTextStyleSubhead"/>
                                                             <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Type" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="z18-4a-pTM">
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Type" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="z18-4a-pTM">
                                                             <rect key="frame" x="0.0" y="40.5" width="33.5" height="18"/>
                                                             <fontDescription key="fontDescription" style="UICTFontTextStyleSubhead"/>
                                                             <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -100,7 +94,9 @@
                             <outlet property="delegate" destination="Wn8-fG-Elj" id="5GL-h5-UC3"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Food Pin" id="gj8-IF-d37"/>
+                    <navigationItem key="navigationItem" title="Food Pin" id="gj8-IF-d37">
+                        <barButtonItem key="backBarButtonItem" title=" " id="AGC-s5-asA"/>
+                    </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Sfy-PN-9bp" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -115,7 +111,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="gr4-KH-Azt">
-                                <rect key="frame" x="0.0" y="44" width="375" height="623"/>
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <view key="tableHeaderView" contentMode="scaleToFill" id="4ZN-4c-n5e" userLabel="Header View" customClass="RestaurantDetailHeaderView" customModule="FoodPin" customModuleProvider="target">
                                     <rect key="frame" x="0.0" y="0.0" width="375" height="350"/>
@@ -128,20 +124,20 @@
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="350"/>
                                             <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </view>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JNH-U8-BtE" userLabel="Name Label">
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JNH-U8-BtE" userLabel="Name Label">
                                             <rect key="frame" x="14" y="271.5" width="91.5" height="41.5"/>
                                             <fontDescription key="fontDescription" name="Rubik-Medium" family="Rubik" pointSize="35"/>
                                             <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="g6g-Ch-LzR" userLabel="Type Label">
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="g6g-Ch-LzR" userLabel="Type Label">
                                             <rect key="frame" x="14" y="316" width="100" height="20"/>
                                             <color key="backgroundColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <constraints>
                                                 <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="100" id="GfW-V6-rZR"/>
                                                 <constraint firstAttribute="height" constant="20" id="xtW-BJ-0Dq"/>
                                             </constraints>
-                                            <fontDescription key="fontDescription" name="Rubik-Regular" family="Rubik" pointSize="13"/>
+                                            <fontDescription key="fontDescription" style="UICTFontTextStyleSubhead"/>
                                             <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <nil key="highlightedColor"/>
                                         </label>
@@ -196,9 +192,9 @@
                                                                 <constraint firstAttribute="width" constant="20" id="tk9-kA-odH"/>
                                                             </constraints>
                                                         </imageView>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="StI-Z3-SOA">
-                                                            <rect key="frame" x="30" y="2" width="287" height="17"/>
-                                                            <fontDescription key="fontDescription" name="Rubik-Regular" family="Rubik" pointSize="14"/>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="StI-Z3-SOA">
+                                                            <rect key="frame" x="30" y="1.5" width="287" height="18"/>
+                                                            <fontDescription key="fontDescription" style="UICTFontTextStyleSubhead"/>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
@@ -218,15 +214,15 @@
                                         </connections>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="RestaurantDetailTextCell" id="6fJ-1X-Bh9" customClass="RestaurantDetailTextCell" customModule="FoodPin" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="432.5" width="375" height="52.5"/>
+                                        <rect key="frame" x="0.0" y="432.5" width="375" height="55"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="6fJ-1X-Bh9" id="RLH-zk-PP5">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="52.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="55"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cTe-af-2nn">
-                                                    <rect key="frame" x="31" y="23" width="313" height="18.5"/>
-                                                    <fontDescription key="fontDescription" name="Rubik-Light" family="Rubik" pointSize="15"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cTe-af-2nn">
+                                                    <rect key="frame" x="31" y="23" width="313" height="21"/>
+                                                    <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
@@ -249,12 +245,11 @@
                         <constraints>
                             <constraint firstItem="rZq-s6-LnE" firstAttribute="bottom" secondItem="gr4-KH-Azt" secondAttribute="bottom" id="NmS-aI-I6w"/>
                             <constraint firstItem="rZq-s6-LnE" firstAttribute="trailing" secondItem="gr4-KH-Azt" secondAttribute="trailing" id="oo1-bH-f2l"/>
-                            <constraint firstItem="gr4-KH-Azt" firstAttribute="top" secondItem="rZq-s6-LnE" secondAttribute="top" id="xXn-Li-tsF"/>
+                            <constraint firstItem="gr4-KH-Azt" firstAttribute="top" secondItem="4oC-0p-ht5" secondAttribute="top" id="xXn-Li-tsF"/>
                             <constraint firstItem="gr4-KH-Azt" firstAttribute="leading" secondItem="rZq-s6-LnE" secondAttribute="leading" id="yvm-ea-s3B"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="rZq-s6-LnE"/>
                     </view>
-                    <navigationItem key="navigationItem" id="qzT-k7-Tqd"/>
                     <connections>
                         <outlet property="headerView" destination="4ZN-4c-n5e" id="ige-pP-4Rw"/>
                         <outlet property="tableView" destination="gr4-KH-Azt" id="IBU-Hp-7LP"/>

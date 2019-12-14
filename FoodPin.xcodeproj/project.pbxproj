@@ -30,6 +30,8 @@
 		FA8A54BD23A4429E0099666F /* RestaurantDetailHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA8A54BC23A4429E0099666F /* RestaurantDetailHeaderView.swift */; };
 		FA8A54BF23A567810099666F /* RestaurantDetailIconTextCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA8A54BE23A567810099666F /* RestaurantDetailIconTextCell.swift */; };
 		FA8A54C123A568FA0099666F /* RestaurantDetailTextCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA8A54C023A568FA0099666F /* RestaurantDetailTextCell.swift */; };
+		FA8A54C423A57AC50099666F /* UIColor+ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA8A54C323A57AC50099666F /* UIColor+ext.swift */; };
+		FA8A54C623A57BF60099666F /* UINavigationController+ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA8A54C523A57BF60099666F /* UINavigationController+ext.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -58,6 +60,8 @@
 		FA8A54BC23A4429E0099666F /* RestaurantDetailHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantDetailHeaderView.swift; sourceTree = "<group>"; };
 		FA8A54BE23A567810099666F /* RestaurantDetailIconTextCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantDetailIconTextCell.swift; sourceTree = "<group>"; };
 		FA8A54C023A568FA0099666F /* RestaurantDetailTextCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantDetailTextCell.swift; sourceTree = "<group>"; };
+		FA8A54C323A57AC50099666F /* UIColor+ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+ext.swift"; sourceTree = "<group>"; };
+		FA8A54C523A57BF60099666F /* UINavigationController+ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UINavigationController+ext.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -90,6 +94,7 @@
 		FA8A548023A178E70099666F /* FoodPin */ = {
 			isa = PBXGroup;
 			children = (
+				FA8A54C223A57AA60099666F /* Extensions */,
 				FA8A54A423A43DF20099666F /* Resources */,
 				FA8A549F23A439CB0099666F /* Storyboard */,
 				FA8A549E23A439C00099666F /* Model */,
@@ -164,6 +169,15 @@
 				FA8A54A623A43E3C0099666F /* Rubik-Regular.ttf */,
 			);
 			path = Fonts;
+			sourceTree = "<group>";
+		};
+		FA8A54C223A57AA60099666F /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				FA8A54C323A57AC50099666F /* UIColor+ext.swift */,
+				FA8A54C523A57BF60099666F /* UINavigationController+ext.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -257,6 +271,8 @@
 				FA8A549C23A220F40099666F /* Restaurant.swift in Sources */,
 				FA8A549A23A21BB60099666F /* RestaurantDetailViewController.swift in Sources */,
 				FA8A548423A178E70099666F /* SceneDelegate.swift in Sources */,
+				FA8A54C623A57BF60099666F /* UINavigationController+ext.swift in Sources */,
+				FA8A54C423A57AC50099666F /* UIColor+ext.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
