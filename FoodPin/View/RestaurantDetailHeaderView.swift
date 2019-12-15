@@ -37,5 +37,6 @@ class RestaurantDetailHeaderView: UIView {
         }
     }
     
+    @IBOutlet var ratingImageView: UIImageView!
     
 }
