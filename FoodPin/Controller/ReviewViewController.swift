@@ -15,7 +15,9 @@ class ReviewViewController: UIViewController {
 
         // Do any additional setup after loading the view.
         
-        backgroundImageView.image = UIImage(named: restaurant.image)
+        if let restaurantImage = restaurant.image {
+            backgroundImageView.image = UIImage(data: restaurantImage as Data)
+        }
         
         // Applying the blurr effect
         let blurEffect = UIBlurEffect(style: .dark)
@@ -64,7 +66,7 @@ class ReviewViewController: UIViewController {
     
     @IBOutlet var rateButtons: [UIButton]!
     
-    var restaurant = Restaurant()
+    var restaurant = RestaurantMO()
     
     
     /*

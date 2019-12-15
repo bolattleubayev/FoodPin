@@ -7,9 +7,12 @@
 //
 
 import UIKit
+import CoreData
 
 class NewRestaurantController: UITableViewController, UITextFieldDelegate, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
-
+    
+    var restaurant: RestaurantMO!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -25,6 +28,7 @@ class NewRestaurantController: UITableViewController, UITextFieldDelegate, UIIma
         if let customFont = UIFont(name: "Rubik-Medium", size: 35.0) {
             navigationController?.navigationBar.largeTitleTextAttributes = [ NSAttributedString.Key.foregroundColor: UIColor(red: 231, green: 76, blue: 60), NSAttributedString.Key.font: customFont]
         }
+        
         
     }
     
@@ -89,6 +93,23 @@ class NewRestaurantController: UITableViewController, UITextFieldDelegate, UIIma
             print("Location: ", addressTextField.text!)
             print("Phone: ", phoneTextField.text!)
             print("Description: ", descriptionTextView.text!)
+            
+            if let appDelegate = (UIApplication.shared.delegate as? AppDelegate) {
+                restaurant = RestaurantMO(context: appDelegate.persistentContainer.viewContext)
+                restaurant.name = nameTextField.text!
+                restaurant.type = typeTextField.text!
+                restaurant.location = addressTextField.text!
+                restaurant.phone = phoneTextField.text!
+                restaurant.summary = descriptionTextView.text!
+                restaurant.isVisited = false
+                
+                if let restaurantImage = photoImageView.image {
+                    restaurant.image = restaurantImage.pngData()
+                }
+                
+                print("Saving data to the context...")
+                appDelegate.saveContext()
+            }
             
             dismiss(animated: true, completion: nil)
         } else {
