@@ -8,7 +8,7 @@
 
 import UIKit
 
-class NewRestaurantController: UITableViewController, UITextFieldDelegate {
+class NewRestaurantController: UITableViewController, UITextFieldDelegate, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -66,6 +66,9 @@ class NewRestaurantController: UITableViewController, UITextFieldDelegate {
     }
     
     
+    @IBOutlet weak var photoImageView: UIImageView!
+    
+    
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         
         if let nextTextField = view.viewWithTag(textField.tag + 1) {
@@ -75,6 +78,54 @@ class NewRestaurantController: UITableViewController, UITextFieldDelegate {
         
         return true
     }
+    
+    @IBAction func saveButtonTapped(_ sender: Any) {
+        
+        // Form validation
+        
+        if nameTextField.text != "", typeTextField.text != "", addressTextField.text != "", phoneTextField.text != "", descriptionTextView.text != "" {
+            print("Name: ", nameTextField.text!)
+            print("Type: ", typeTextField.text!)
+            print("Location: ", addressTextField.text!)
+            print("Phone: ", phoneTextField.text!)
+            print("Description: ", descriptionTextView.text!)
+            
+            dismiss(animated: true, completion: nil)
+        } else {
+            let alert = UIAlertController(title: "Oops", message: "We can't proceed because one of the fields is blank. Please note that all fields are required", preferredStyle: .alert)
+            alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
+            
+            present(alert, animated: true, completion: nil)
+        }
+    }
+    
+    
+    
+    // MARK: - Image Picker data source
+    
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
+        
+        if let selectedImage = info[UIImagePickerController.InfoKey.originalImage] as? UIImage {
+            photoImageView.image = selectedImage
+            photoImageView.contentMode = .scaleAspectFill
+            photoImageView.clipsToBounds = true
+        }
+        
+        let leadingConstraint = NSLayoutConstraint(item: photoImageView, attribute: .leading, relatedBy: .equal, toItem: photoImageView.superview, attribute: .leading, multiplier: 1, constant: 0)
+        leadingConstraint.isActive = true
+        
+        let trailingConstraint = NSLayoutConstraint(item: photoImageView, attribute: .trailing, relatedBy: .equal, toItem: photoImageView.superview, attribute: .trailing, multiplier: 1, constant: 0)
+        trailingConstraint.isActive = true
+        
+        let topConstraint = NSLayoutConstraint(item: photoImageView, attribute: .top, relatedBy: .equal, toItem: photoImageView.superview, attribute: .top, multiplier: 1, constant: 0)
+        topConstraint.isActive = true
+        
+        let bottomConstraint = NSLayoutConstraint(item: photoImageView, attribute: .bottom, relatedBy: .equal, toItem: photoImageView.superview, attribute: .bottom, multiplier: 1, constant: 0)
+        bottomConstraint.isActive = true
+        
+        dismiss(animated: true, completion: nil)
+    }
+    
     
     // MARK: - Table view data source
     
@@ -90,6 +141,7 @@ class NewRestaurantController: UITableViewController, UITextFieldDelegate {
                 
                 if UIImagePickerController.isSourceTypeAvailable(.camera) { // checking if media type is available as user may restrict access
                     let imagePicker = UIImagePickerController()
+                    imagePicker.delegate = self
                     imagePicker.allowsEditing = false
                     imagePicker.sourceType = .camera
                     
@@ -101,6 +153,7 @@ class NewRestaurantController: UITableViewController, UITextFieldDelegate {
                 (action) in
                 if UIImagePickerController.isSourceTypeAvailable(.photoLibrary) { // checking if media type is available as user may restrict access
                     let imagePicker = UIImagePickerController()
+                    imagePicker.delegate = self
                     imagePicker.allowsEditing = false
                     imagePicker.sourceType = .photoLibrary
                     
