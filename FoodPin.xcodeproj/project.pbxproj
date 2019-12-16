@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		FA13B24B23A6E40000467D09 /* Onboarding.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FA13B24A23A6E40000467D09 /* Onboarding.storyboard */; };
+		FA13B24D23A7777E00467D09 /* WalkthroughContentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA13B24C23A7777E00467D09 /* WalkthroughContentViewController.swift */; };
+		FA13B25123A77A6400467D09 /* WalkthriughPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA13B25023A77A6400467D09 /* WalkthriughPageViewController.swift */; };
 		FA8A548223A178E70099666F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA8A548123A178E70099666F /* AppDelegate.swift */; };
 		FA8A548423A178E70099666F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA8A548323A178E70099666F /* SceneDelegate.swift */; };
 		FA8A548923A178E70099666F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FA8A548723A178E70099666F /* Main.storyboard */; };
@@ -43,6 +46,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		FA13B24A23A6E40000467D09 /* Onboarding.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Onboarding.storyboard; sourceTree = "<group>"; };
+		FA13B24C23A7777E00467D09 /* WalkthroughContentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WalkthroughContentViewController.swift; sourceTree = "<group>"; };
+		FA13B25023A77A6400467D09 /* WalkthriughPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WalkthriughPageViewController.swift; sourceTree = "<group>"; };
 		FA8A547E23A178E70099666F /* FoodPin.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FoodPin.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FA8A548123A178E70099666F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FA8A548323A178E70099666F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -135,6 +141,8 @@
 				FA8A54CE23A595740099666F /* MapViewController.swift */,
 				FA8A54D023A61F120099666F /* ReviewViewController.swift */,
 				FA8A54D423A64A6A0099666F /* NewRestaurantController.swift */,
+				FA13B24C23A7777E00467D09 /* WalkthroughContentViewController.swift */,
+				FA13B25023A77A6400467D09 /* WalkthriughPageViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -152,6 +160,7 @@
 			children = (
 				FA8A548723A178E70099666F /* Main.storyboard */,
 				FA8A548C23A178E90099666F /* LaunchScreen.storyboard */,
+				FA13B24A23A6E40000467D09 /* Onboarding.storyboard */,
 			);
 			path = Storyboard;
 			sourceTree = "<group>";
@@ -277,6 +286,7 @@
 				FA8A548E23A178E90099666F /* LaunchScreen.storyboard in Resources */,
 				FA8A54B523A43E3C0099666F /* Rubik-Black.ttf in Resources */,
 				FA8A54BB23A43E3C0099666F /* Rubik-BoldItalic.ttf in Resources */,
+				FA13B24B23A6E40000467D09 /* Onboarding.storyboard in Resources */,
 				FA8A54B123A43E3C0099666F /* Rubik-Regular.ttf in Resources */,
 				FA8A548B23A178E90099666F /* Assets.xcassets in Resources */,
 				FA8A54B623A43E3C0099666F /* Rubik-Italic.ttf in Resources */,
@@ -303,10 +313,12 @@
 				FA8A548223A178E70099666F /* AppDelegate.swift in Sources */,
 				FA8A54BF23A567810099666F /* RestaurantDetailIconTextCell.swift in Sources */,
 				FA8A54BD23A4429E0099666F /* RestaurantDetailHeaderView.swift in Sources */,
+				FA13B25123A77A6400467D09 /* WalkthriughPageViewController.swift in Sources */,
 				FA8A549C23A220F40099666F /* Restaurant.swift in Sources */,
 				FA8A54CB23A58B190099666F /* RestaurantDetailSeparatorCell.swift in Sources */,
 				FA8A54CD23A58C490099666F /* RestaurantDetailMapCell.swift in Sources */,
 				FA8A549A23A21BB60099666F /* RestaurantDetailViewController.swift in Sources */,
+				FA13B24D23A7777E00467D09 /* WalkthroughContentViewController.swift in Sources */,
 				FA8A54D323A6488D0099666F /* RoundedTextField.swift in Sources */,
 				FA8A548423A178E70099666F /* SceneDelegate.swift in Sources */,
 				FA8A54C623A57BF60099666F /* UINavigationController+ext.swift in Sources */,
