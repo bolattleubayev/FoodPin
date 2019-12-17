@@ -85,6 +85,20 @@ class RestaurantTableViewController: UITableViewController, NSFetchedResultsCont
         
     }
     
+    override func viewDidAppear(_ animated: Bool) {
+        
+        // accessing the walkthrough
+        
+        if UserDefaults.standard.bool(forKey: "hasViewedWalkthrough") {
+            return
+        }
+        
+        let storyboard = UIStoryboard(name: "Onboarding", bundle: nil)
+        if let walkthroughViewController = storyboard.instantiateViewController(identifier: "WalkthroughViewController") as? WalkthroughViewController {
+            present(walkthroughViewController, animated: true, completion: nil)
+        }
+    }
+    
     // MARK: - Search logic
     
     func filterContent(for searchText: String) {

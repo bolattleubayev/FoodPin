@@ -8,8 +8,28 @@
 
 import UIKit
 
-class WalkthriughPageViewController: UIPageViewController, UIPageViewControllerDataSource {
+protocol WalkthrhughPageViewControllerDelegate: class {
+    func didUpdatePageIndex(currentIndex: Int)
+}
+
+class WalkthriughPageViewController: UIPageViewController, UIPageViewControllerDataSource, UIPageViewControllerDelegate {
     
+    // MARK: - Delegate
+    weak var walkthroughDelegate: WalkthrhughPageViewControllerDelegate?
+    
+    func pageViewController(_ pageViewController: UIPageViewController, didFinishAnimating finished: Bool, previousViewControllers: [UIViewController], transitionCompleted completed: Bool) {
+        if completed {
+            if let contentViewController = pageViewController.viewControllers?.first as? WalkthroughContentViewController {
+                
+                currentIndex = contentViewController.index
+                
+                walkthroughDelegate?.didUpdatePageIndex(currentIndex: contentViewController.index)
+            }
+        }
+    }
+    
+    
+    // MARK: - Data Source
     func pageViewController(_ pageViewController: UIPageViewController, viewControllerBefore viewController: UIViewController) -> UIViewController? {
         var index = (viewController as! WalkthroughContentViewController).index
         index -= 1
@@ -38,12 +58,20 @@ class WalkthriughPageViewController: UIPageViewController, UIPageViewControllerD
             setViewControllers([startingViewController], direction: .forward, animated: true, completion: nil)
         }
         
+        delegate = self
     }
     
     var pageHeadings = ["CREATE YOUR OWN FOOD GUIDE", "SHOW YOU THE LOCATION", "DISCOVER GREATRESTAURANTS"]
     var pageImages = ["onboarding-1", "onboarding-2", "onboarding-3"]
     var pageSubHeadings = ["Pin your favourite restaurants and create your own food guide", "Search and locate your favourite restaurant on Maps", "Find restaurants shared by your friends and other foodies"]
     var currentIndex = 0
+    
+    func forwardPage() {
+        currentIndex += 1
+        if let nextViewController = contentViewController(at: currentIndex) {
+            setViewControllers([nextViewController], direction: .forward, animated: true, completion: nil)
+        }
+    }
     
     func contentViewController(at index: Int) -> WalkthroughContentViewController? {
         

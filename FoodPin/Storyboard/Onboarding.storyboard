@@ -15,10 +15,10 @@
         </array>
     </customFonts>
     <scenes>
-        <!--Page View Controller-->
+        <!--Walkthriugh Page View Controller-->
         <scene sceneID="UKs-54-jMc">
             <objects>
-                <pageViewController storyboardIdentifier="WalkthroughController" autoresizesArchivedViewToFullSize="NO" transitionStyle="scroll" navigationOrientation="horizontal" spineLocation="none" id="7Hf-nG-kKD" sceneMemberID="viewController"/>
+                <pageViewController storyboardIdentifier="WalkthriughPageViewController" autoresizesArchivedViewToFullSize="NO" transitionStyle="scroll" navigationOrientation="horizontal" spineLocation="none" id="7Hf-nG-kKD" customClass="WalkthriughPageViewController" customModule="FoodPin" customModuleProvider="target" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xLp-Jx-8Ta" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1841" y="-101"/>
@@ -26,7 +26,7 @@
         <!--Walkthrough Content View Controller-->
         <scene sceneID="SG8-3w-7fD">
             <objects>
-                <viewController id="drH-3s-nsp" customClass="WalkthroughContentViewController" customModule="FoodPin" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="WalkthroughContentViewController" id="drH-3s-nsp" customClass="WalkthroughContentViewController" customModule="FoodPin" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="R10-ag-BPl">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="451"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -42,12 +42,18 @@
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="HEADING" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yub-f5-5jj">
                                                 <rect key="frame" x="8.5" y="0.0" width="78.5" height="20.5"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="20.5" id="fHd-eX-49l"/>
+                                                </constraints>
                                                 <fontDescription key="fontDescription" name="Rubik-Bold" family="Rubik" pointSize="17"/>
                                                 <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Subheading" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cgh-Ui-Las">
                                                 <rect key="frame" x="0.0" y="30.5" width="95" height="20.5"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="20.5" id="IEq-dL-7DN"/>
+                                                </constraints>
                                                 <fontDescription key="fontDescription" name="Rubik-Regular" family="Rubik" pointSize="17"/>
                                                 <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
@@ -57,6 +63,8 @@
                                 </subviews>
                                 <constraints>
                                     <constraint firstItem="des-uy-H75" firstAttribute="leading" secondItem="RGa-WO-o3F" secondAttribute="leadingMargin" id="Edd-yr-EuM"/>
+                                    <constraint firstItem="S3t-9u-F7V" firstAttribute="top" secondItem="des-uy-H75" secondAttribute="bottom" constant="50" id="GbX-dM-02t"/>
+                                    <constraint firstAttribute="bottom" secondItem="S3t-9u-F7V" secondAttribute="bottom" id="wiZ-y2-lvk"/>
                                 </constraints>
                             </stackView>
                         </subviews>
@@ -81,10 +89,10 @@
             </objects>
             <point key="canvasLocation" x="2577" y="-99"/>
         </scene>
-        <!--View Controller-->
+        <!--Walkthrough View Controller-->
         <scene sceneID="Wyl-1w-qXd">
             <objects>
-                <viewController id="1ey-V7-heT" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="WalkthroughViewController" id="1ey-V7-heT" customClass="WalkthroughViewController" customModule="FoodPin" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="5qa-o8-fho">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -117,6 +125,9 @@
                                                 <state key="normal" title="NEXT">
                                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </state>
+                                                <connections>
+                                                    <action selector="nextButtonTapped:" destination="1ey-V7-heT" eventType="touchUpInside" id="Jih-bB-QVU"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wcN-3A-2L2">
                                                 <rect key="frame" x="78" y="127" width="34" height="33"/>
@@ -124,6 +135,9 @@
                                                 <state key="normal" title="Skip">
                                                     <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </state>
+                                                <connections>
+                                                    <action selector="skipButtonTapped:" destination="1ey-V7-heT" eventType="touchUpInside" id="gw8-gm-0Q4"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                     </stackView>
@@ -148,6 +162,11 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="WQq-NO-Rn7"/>
                     </view>
+                    <connections>
+                        <outlet property="nextButton" destination="lHZ-0J-YzL" id="S3O-lH-b7q"/>
+                        <outlet property="pageControl" destination="WAb-oq-kIC" id="6QB-cS-xZ0"/>
+                        <outlet property="skipButton" destination="wcN-3A-2L2" id="KMg-Ts-u5s"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="KYV-hD-FDF" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
