@@ -12,6 +12,7 @@
 		FA13B25123A77A6400467D09 /* WalkthriughPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA13B25023A77A6400467D09 /* WalkthriughPageViewController.swift */; };
 		FA13B25323A7893000467D09 /* WalkthroughViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA13B25223A7893000467D09 /* WalkthroughViewController.swift */; };
 		FA13B25623A936A300467D09 /* About.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FA13B25423A936A300467D09 /* About.storyboard */; };
+		FA13B25923A9374200467D09 /* Discover.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FA13B25723A9374200467D09 /* Discover.storyboard */; };
 		FA8A548223A178E70099666F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA8A548123A178E70099666F /* AppDelegate.swift */; };
 		FA8A548423A178E70099666F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA8A548323A178E70099666F /* SceneDelegate.swift */; };
 		FA8A548923A178E70099666F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FA8A548723A178E70099666F /* Main.storyboard */; };
@@ -53,6 +54,7 @@
 		FA13B25023A77A6400467D09 /* WalkthriughPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WalkthriughPageViewController.swift; sourceTree = "<group>"; };
 		FA13B25223A7893000467D09 /* WalkthroughViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WalkthroughViewController.swift; sourceTree = "<group>"; };
 		FA13B25523A936A300467D09 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = FoodPin/Storyboard/Base.lproj/About.storyboard; sourceTree = "<group>"; };
+		FA13B25823A9374200467D09 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Discover.storyboard; sourceTree = "<group>"; };
 		FA8A547E23A178E70099666F /* FoodPin.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FoodPin.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FA8A548123A178E70099666F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FA8A548323A178E70099666F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -163,6 +165,7 @@
 		FA8A549F23A439CB0099666F /* Storyboard */ = {
 			isa = PBXGroup;
 			children = (
+				FA13B25723A9374200467D09 /* Discover.storyboard */,
 				FA13B25423A936A300467D09 /* About.storyboard */,
 				FA8A548723A178E70099666F /* Main.storyboard */,
 				FA8A548C23A178E90099666F /* LaunchScreen.storyboard */,
@@ -294,6 +297,7 @@
 				FA8A54B523A43E3C0099666F /* Rubik-Black.ttf in Resources */,
 				FA8A54BB23A43E3C0099666F /* Rubik-BoldItalic.ttf in Resources */,
 				FA13B24B23A6E40000467D09 /* Onboarding.storyboard in Resources */,
+				FA13B25923A9374200467D09 /* Discover.storyboard in Resources */,
 				FA8A54B123A43E3C0099666F /* Rubik-Regular.ttf in Resources */,
 				FA8A548B23A178E90099666F /* Assets.xcassets in Resources */,
 				FA8A54B623A43E3C0099666F /* Rubik-Italic.ttf in Resources */,
@@ -345,6 +349,14 @@
 				FA13B25523A936A300467D09 /* Base */,
 			);
 			name = About.storyboard;
+			sourceTree = "<group>";
+		};
+		FA13B25723A9374200467D09 /* Discover.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				FA13B25823A9374200467D09 /* Base */,
+			);
+			name = Discover.storyboard;
 			sourceTree = "<group>";
 		};
 		FA8A548723A178E70099666F /* Main.storyboard */ = {

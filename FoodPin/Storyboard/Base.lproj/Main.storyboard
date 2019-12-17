@@ -12,52 +12,6 @@
         </array>
     </customFonts>
     <scenes>
-        <!--Discover-->
-        <scene sceneID="HDM-hA-Pvc">
-            <objects>
-                <tableViewController id="h5S-WG-db1" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="zil-ax-lER">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                        <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="hRf-hV-JRg">
-                                <rect key="frame" x="0.0" y="28" width="375" height="43.5"/>
-                                <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="hRf-hV-JRg" id="5m4-wf-MHp">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
-                                    <autoresizingMask key="autoresizingMask"/>
-                                </tableViewCellContentView>
-                            </tableViewCell>
-                        </prototypes>
-                        <connections>
-                            <outlet property="dataSource" destination="h5S-WG-db1" id="9Dq-he-NuX"/>
-                            <outlet property="delegate" destination="h5S-WG-db1" id="W1t-qF-PJB"/>
-                        </connections>
-                    </tableView>
-                    <navigationItem key="navigationItem" title="Discover" id="gBU-QB-Fgu"/>
-                </tableViewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="3z3-NO-gyK" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1692" y="-1305"/>
-        </scene>
-        <!--Discover-->
-        <scene sceneID="3j6-Pg-3Iv">
-            <objects>
-                <navigationController id="ZvM-Uc-j4p" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Discover" image="discover" id="5bE-AU-Py9"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="7nY-zK-g86">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <connections>
-                        <segue destination="h5S-WG-db1" kind="relationship" relationship="rootViewController" id="OCd-8D-5M3"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="v7C-hp-iko" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="741" y="-1305"/>
-        </scene>
         <!--Food Pin-->
         <scene sceneID="IXt-us-lQD">
             <objects>
@@ -868,7 +822,7 @@
                     </tabBar>
                     <connections>
                         <segue destination="qWY-cB-mm5" kind="relationship" relationship="viewControllers" id="whg-1A-YfS"/>
-                        <segue destination="ZvM-Uc-j4p" kind="relationship" relationship="viewControllers" id="hgX-Qi-nFh"/>
+                        <segue destination="sfi-W7-NWW" kind="relationship" relationship="viewControllers" id="hgX-Qi-nFh"/>
                         <segue destination="xpN-cb-3pb" kind="relationship" relationship="viewControllers" id="uLk-mF-8XJ"/>
                     </connections>
                 </tabBarController>
@@ -886,13 +840,22 @@
             </objects>
             <point key="canvasLocation" x="740" y="-2084"/>
         </scene>
+        <!--Discover-->
+        <scene sceneID="ABG-qx-LiU">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Discover" id="sfi-W7-NWW" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Item" id="EMD-Qr-Qhj"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="AtH-MJ-Vhd" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="985" y="-1306"/>
+        </scene>
     </scenes>
     <resources>
         <image name="angry" width="78" height="103"/>
         <image name="close" width="16" height="16"/>
         <image name="cool" width="78" height="83"/>
         <image name="cross" width="33" height="32"/>
-        <image name="discover" width="35" height="20"/>
         <image name="empty" width="310" height="372"/>
         <image name="favorite" width="22" height="22"/>
         <image name="happy" width="78" height="86"/>
