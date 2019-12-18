@@ -15,6 +15,7 @@
 		FA13B25923A9374200467D09 /* Discover.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FA13B25723A9374200467D09 /* Discover.storyboard */; };
 		FA13B25B23A93A6100467D09 /* AboutTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA13B25A23A93A6100467D09 /* AboutTableViewController.swift */; };
 		FA13B25D23A944F700467D09 /* WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA13B25C23A944F700467D09 /* WebViewController.swift */; };
+		FA3C3E3123A9A4A600018AF3 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = FA3C3E2F23A9A4A600018AF3 /* InfoPlist.strings */; };
 		FA8A548223A178E70099666F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA8A548123A178E70099666F /* AppDelegate.swift */; };
 		FA8A548423A178E70099666F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA8A548323A178E70099666F /* SceneDelegate.swift */; };
 		FA8A548923A178E70099666F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FA8A548723A178E70099666F /* Main.storyboard */; };
@@ -62,6 +63,7 @@
 		FA13B25823A9374200467D09 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Discover.storyboard; sourceTree = "<group>"; };
 		FA13B25A23A93A6100467D09 /* AboutTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutTableViewController.swift; sourceTree = "<group>"; };
 		FA13B25C23A944F700467D09 /* WebViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebViewController.swift; sourceTree = "<group>"; };
+		FA3C3E3023A9A4A600018AF3 /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		FA8A547E23A178E70099666F /* FoodPin.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FoodPin.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FA8A548123A178E70099666F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FA8A548323A178E70099666F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -147,6 +149,7 @@
 				FA8A548323A178E70099666F /* SceneDelegate.swift */,
 				FA8A548A23A178E90099666F /* Assets.xcassets */,
 				FA8A548F23A178E90099666F /* Info.plist */,
+				FA3C3E2F23A9A4A600018AF3 /* InfoPlist.strings */,
 				FA8A54F923A691E10099666F /* FoodPin.xcdatamodeld */,
 			);
 			path = FoodPin;
@@ -291,6 +294,7 @@
 			knownRegions = (
 				en,
 				Base,
+				de,
 			);
 			mainGroup = FA8A547523A178E70099666F;
 			productRefGroup = FA8A547F23A178E70099666F /* Products */;
@@ -314,6 +318,7 @@
 				FA8A548E23A178E90099666F /* LaunchScreen.storyboard in Resources */,
 				FA8A54B523A43E3C0099666F /* Rubik-Black.ttf in Resources */,
 				FA8A54BB23A43E3C0099666F /* Rubik-BoldItalic.ttf in Resources */,
+				FA3C3E3123A9A4A600018AF3 /* InfoPlist.strings in Resources */,
 				FA13B24B23A6E40000467D09 /* Onboarding.storyboard in Resources */,
 				FA13B25923A9374200467D09 /* Discover.storyboard in Resources */,
 				FA8A54B123A43E3C0099666F /* Rubik-Regular.ttf in Resources */,
@@ -379,6 +384,14 @@
 				FA13B25823A9374200467D09 /* Base */,
 			);
 			name = Discover.storyboard;
+			sourceTree = "<group>";
+		};
+		FA3C3E2F23A9A4A600018AF3 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				FA3C3E3023A9A4A600018AF3 /* de */,
+			);
+			name = InfoPlist.strings;
 			sourceTree = "<group>";
 		};
 		FA8A548723A178E70099666F /* Main.storyboard */ = {
