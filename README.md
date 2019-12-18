@@ -57,7 +57,24 @@ Every entry has its own local screen with all available data displayed in table.
 
 ## Other Tabs
 
-All previous functionality was developed in "Favorites" tab. There are two more "About" and "Discover"
+All previous functionality was developed in "Favorites" tab. There are two more "About" and "Discover".
 
+<p float="left">
+  <img src="images/8.png" width="200" />
+</p>
+
+"About" tab provides user with useful links about the app. Links are interactive and tapping them takes you either to Safari, or to a in-app browser donew with SafariServices and WebKit.
+
+<p float="left">
+  <img src="images/9.png" width="200" />
+</p>
+
+### Discover tab
+
+<p float="left">
+  <img src="images/10.png" width="200" />
+</p>
+
+Finally, discover tab show user available data from the Cloud in chronological order. This was done with CloudKit
 
 
